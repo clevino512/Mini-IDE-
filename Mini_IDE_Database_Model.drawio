@@ -1,0 +1,73 @@
+<mxfile host="65bd71144e">
+    <diagram id="XTbUQdZzVA43XwRye5Km" name="Page-1">
+        <mxGraphModel dx="1405" dy="1613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Mini IDE - Schéma de la Base de Données (MongoDB)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="280" y="30" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="recent_files" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="120" width="280" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="_id : ObjectId (Primary Key)" style="text;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=0" vertex="1" parent="3">
+                    <mxGeometry y="30" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="filename : String" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="60" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="filepath : String (Unique)" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="90" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="language : String (&#39;py&#39; | &#39;c&#39; | &#39;js&#39;)" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="120" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="content : String" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="150" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="opened_at : Date" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="180" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="created_at : Date" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="3">
+                    <mxGeometry y="210" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="execution_history" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="120" width="280" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="_id : ObjectId (Primary Key)" style="text;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=0" vertex="1" parent="11">
+                    <mxGeometry y="30" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="file_id : ObjectId (Ref → recent_files._id)" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="60" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="language : String (&#39;py&#39; | &#39;c&#39; | &#39;js&#39;)" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="90" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="output : String" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="120" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="error : String" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="150" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="executed_at : Date" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="180" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="duration_ms : Number" style="text;align=left;verticalAlign=middle;spacingLeft=10" vertex="1" parent="11">
+                    <mxGeometry y="210" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="3" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="1 → N (file_id)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="19">
+                    <mxGeometry x="-0.5" y="-10" relative="1" as="offset"/>
+                </mxCell>
+                <mxCell id="21" value="Légende :" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="80" y="420" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Collection MongoDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="460" width="180" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
