@@ -65,7 +65,7 @@ mini-ide/
 ### 1. Prérequis
 - Node.js 18 ou supérieur
 - MongoDB (local ou Docker)
-- Python 3, GCC et Node.js installés et dans le PATH (pour l’exécution du code)
+- Node.js installés et dans le PATH (pour l’exécution du code)
 
 ### 2. Installation
 
@@ -124,7 +124,7 @@ L’application Electron se lancera automatiquement avec rechargement à chaud.
 ## Elements de réalisation de projet
 figjam: UserFlow principal du projet 
 Figma: Sert pour le design graphique  (https://www.figma.com/design/NFHER8VION0iIKJVQq9fsv/Mni-IDE?node-id=19-47&t=9q6DQH4OyL2wViCN-1)
-Draw.io: utilisé pour la modèle de la base des donées 
+Draw.io: utilisé pour la modèle de la base des donées  backend/docs/Mini_IDE_Database_Model.drawio.svg
 
 ---
 
